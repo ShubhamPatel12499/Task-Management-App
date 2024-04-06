@@ -1,0 +1,65 @@
+.view-board {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .task-item {
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item p {
+    margin: 0;
+  }
+  
+  .task-item p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .date-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  .date-input-container label {
+    margin-right: 10px;
+  }
+  
+  .date-input-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .date-input-container input[type="date"] {
+    width: 150px;
+  }
+
+  .view-task-container button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .view-task-container button:hover {
+    background-color: #0056b3;
+  }
