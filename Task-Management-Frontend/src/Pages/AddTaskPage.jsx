@@ -1,29 +1,36 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 import "../Styles/AddTaskPage.css";
+import { useNavigate } from "react-router-dom";
 
 const AddTaskPage = () => {
-  const [taskName, setTaskName] = useState('');
-  const [status, setStatus] = useState('');
-  const [date, setDate] = useState('');
-  const [error, setError] = useState('');
+  const [taskName, setTaskName] = useState("");
+  const [status, setStatus] = useState("");
+  const [date, setDate] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
+  //Post Req for Add the new Task
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/tasks/addTask', {
-        taskName,
-        status,
-        date
-      });
-      alert('Task added successfully!');
-      setTaskName('');
-      setStatus('');
-      setDate('');
-      setError('');
+      await axios.post(
+        "https://task-management-backend-5wrr.onrender.com/tasks/addTask",
+        {
+          taskName,
+          status,
+          date,
+        }
+      );
+      setTaskName("");
+      setStatus("");
+      setDate("");
+      setError("");
+      alert("Task added successfully!");
+      navigate("/viewTask");
     } catch (error) {
-      console.error('Error adding task:', error);
-      alert('Failed to add task. Please try again.');
+      console.error("Error adding task:", error);
+      alert("Failed to add task. Please try again.");
     }
   };
 
@@ -49,10 +56,10 @@ const AddTaskPage = () => {
             required
           >
             <option value="">Select Status</option>
-            <option value="todo">To Do</option>
-            <option value="in-progress">In Progress</option>
-            <option value="done">Done</option>
-            <option value="rework">Rework</option>
+            <option value="Tasks">Tasks</option>
+            <option value="In-progress">In Progress</option>
+            <option value="Done">Done</option>
+            <option value="Rework">Rework</option>
           </select>
         </label>
         <br />
