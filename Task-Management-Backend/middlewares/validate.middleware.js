@@ -6,8 +6,8 @@ const Validator = async (req, res, next) => {
     }
 
     const allowedStatusValues = ["Tasks", "In-progress", "Done", "Rework"];
-    if (!status || !allowedStatusValues.includes(status.toLowerCase())) {
-        return res.status(400).send("Invalid status value");
+    if (!allowedStatusValues.includes(status) && !allowedStatusValues.includes(status.toLowerCase())) {
+        return res.status(400).send('Invalid status value');
     }
 
     if (!date || isNaN(Date.parse(date))) {

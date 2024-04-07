@@ -1,6 +1,8 @@
 const express=require("express")
 const {connection}=require("./config/db")
 const {taskRouter}=require("./routes/Task.route")
+const {userRouter}=require("./routes/User.route")
+const {authenticate}=require("./middlewares/authenticate.middleware")
 
 const cors = require('cors')
 
@@ -12,7 +14,7 @@ app.use(cors({
 }))
 app.use(express.json())
 
-
+app.use("/users",userRouter)
 app.use("/tasks",taskRouter)
 
 

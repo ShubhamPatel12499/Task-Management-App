@@ -1,6 +1,7 @@
 const express = require("express");
 const { taskModel } = require("../models/Task.model");
 const { Validator } = require("../middlewares/validate.middleware");
+const { authenticate } = require("../middlewares/authenticate.middleware");
 const taskRouter = express.Router();
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
@@ -50,7 +51,7 @@ taskRouter.get('/download/:status', async (req, res) => {
     }
 });
 
-taskRouter.post("/addTask", Validator, async (req, res) => {
+taskRouter.post("/addTask", authenticate, Validator, async (req, res) => {
     const payload = req.body;
     try {
         const newTask = new taskModel(payload);
