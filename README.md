@@ -6,9 +6,9 @@ This app helps you manage your tasks easily. You can add, view, edit, and delete
 Fullstack 
 
 ## Deplolyed App
-Frontend: https://6612e80800c5bff2af091c20--elaborate-stardust-6ea46e.netlify.app
-Backend: https://task-management-backend-5wrr.onrender.com
-Database: https://cloud.mongodb.com/v2/63b6f034b7479b13472cb383#/metrics/replicaSet/65ae0b29cc1b7c68af65999e/explorer/TaskManagementApp/tasks/find
+- Frontend: https://6612e80800c5bff2af091c20--elaborate-stardust-6ea46e.netlify.app
+- Backend: https://task-management-backend-5wrr.onrender.com
+- Database: https://cloud.mongodb.com/v2/63b6f034b7479b13472cb383#/metrics/replicaSet/65ae0b29cc1b7c68af65999e/explorer/TaskManagementApp/tasks/find
 
 ## Directory Structure
 Task-Management-App/
@@ -40,15 +40,15 @@ You can use this app for a Task Management.
 You can create User from Signup Page.
 
 ## API Endpoints
-GET /tasks/getTasks - Retrieve all Tasks
-GET /tasks/:taskId - Get particular task
-POST /tasks/addTask - create a new Task
-PATCH /tasks/updateStatus/:taskId - Update the status of task while drag and drop (for update the status only)
-PATCH /tasks/updateTask/:taskId - Update the Task (for update all data)
-DELETE /tasks/delete/:taskId - Delete the Task
-DOWNLOAD PDF /tasks/download/:status - Download Pdf
-POST /users/login - Login the user
-POST /users/register - Register the user
+- GET /tasks/getTasks - Retrieve all Tasks
+- GET /tasks/:taskId - Get particular task
+- POST /tasks/addTask - create a new Task
+- PATCH /tasks/updateStatus/:taskId - Update the status of task while drag and drop (for update the status only)
+- PATCH /tasks/updateTask/:taskId - Update the Task (for update all data)
+- DELETE /tasks/delete/:taskId - Delete the Task
+- DOWNLOAD PDF /tasks/download/:status - Download Pdf
+- POST /users/login - Login the user
+- POST /users/register - Register the user
 
 ## Technology Stack
 - Frontend - Reaxt.js
