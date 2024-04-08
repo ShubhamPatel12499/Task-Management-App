@@ -10,6 +10,7 @@ const ViewTaskPage = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [editingTask, setEditingTask] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchData(startDate, endDate);
@@ -17,6 +18,7 @@ const ViewTaskPage = () => {
 
   //Get the data 
   const fetchData = async (startDate, endDate) => {
+    setLoading(true); 
     try {
       const response = await axios.get('https://task-management-backend-5wrr.onrender.com/tasks/getTasks', {
         params: {
@@ -28,6 +30,9 @@ const ViewTaskPage = () => {
       setTasks(sortedTasks);
     } catch (error) {
       console.error('Error fetching tasks:', error);
+    }
+    finally {
+      setLoading(false); 
     }
   };
 
@@ -169,6 +174,12 @@ const ViewTaskPage = () => {
   return (
     <div className="view-task-container">
       <h2>All Tasks</h2>
+      {loading && (
+        <div className="loading-overlay">
+          <div className="spinner"></div>
+          <div>Loading...</div>
+        </div>
+      )}
       {editingTask && (
         <EditTaskForm
           taskId={editingTask._id}
