@@ -6,7 +6,7 @@ This app helps you manage your tasks easily. You can add, view, edit, and delete
 Fullstack 
 
 ## Deplolyed App
-- Frontend: https://6612e80800c5bff2af091c20--elaborate-stardust-6ea46e.netlify.app
+- Frontend: https://6613ecf24e14e80edd8b5a52--elaborate-stardust-6ea46e.netlify.app
 - Backend: https://task-management-backend-5wrr.onrender.com
 - Database: https://cloud.mongodb.com/v2/63b6f034b7479b13472cb383#/metrics/replicaSet/65ae0b29cc1b7c68af65999e/explorer/TaskManagementApp/tasks/find
 
