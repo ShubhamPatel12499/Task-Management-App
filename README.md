@@ -1,5 +1,7 @@
 # Task-Management-App
 
+This app helps you manage your tasks easily. You can add, view, edit, and delete tasks. It also offers convenient task management along with user authentication features for login and signup. The app is designed with a user-friendly interface, complete with a navigation bar and footer.
+
 <h2>Add Task Page</h2>
 <img src="https://github.com/ShubhamPatel12499/Task-Management-App/assets/98810944/9c645316-5d5f-4fc1-b7ff-4cc516069212"/>
 
