@@ -15,8 +15,11 @@ Task-Management-App/
 ├─ Task-Management-Backend/
 ├─ Task-Management-Frontend/
 
-## Video Walkthrough of the project and codebase
+## Video Walkthrough of the project
 https://drive.google.com/file/d/11v6TFOik_LAc8zrEw3e2D6AGCKq60c20/view?usp=sharing
+
+## Video Walkthrough of the codebase
+https://drive.google.com/file/d/1FopeiZPlo78tKLHKzQ_mMlBHk6HoRMmT/view?usp=sharing
 
 ## Features
 - Add Task 
